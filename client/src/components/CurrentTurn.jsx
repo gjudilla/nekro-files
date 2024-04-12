@@ -25,7 +25,6 @@ function CurrentTurn() {
     // function to pause timer manually
     const togglePause = () => {
         setIsPaused(!isPaused)
-
     }
 
     return (
@@ -36,8 +35,8 @@ function CurrentTurn() {
             <div className="flex justify-around items-center">
                 <button className="rounded-lg bg-blue-400 p-4 text-3xl">Politics | 4</button>
                 <button className="rounded-lg bg-blue-400 p-4 text-3xl" onClick={togglePause}>
-                    {!isPaused ? <span className="blink">{formatTime(timer)}</span> : ""}
-                    </button>
+                    <span className={isPaused ? 'blink' : ""}>{formatTime(timer)}</span>
+                </button>
             </div>
         </div>
     )

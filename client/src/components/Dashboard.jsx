@@ -9,7 +9,7 @@ import GameState from "./GameState";
 import StatusPhaseList from "./StatusPhaseList";
 
 function Dashboard({ phase }) {
-    const isActionPhase = phase === "status";
+    const isActionPhase = phase === "action";
     return (
         <div className="grid grid-cols-2 grid-rows-3 gap-4">
             <div className="col-start-1 row-start-1">
