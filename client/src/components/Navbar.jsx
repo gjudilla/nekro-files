@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const AppNavbar = () => {
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(true);
 
    return (
     <>
