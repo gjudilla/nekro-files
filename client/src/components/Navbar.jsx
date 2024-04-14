@@ -18,12 +18,7 @@ const AppNavbar = () => {
                         <Link to='/dashboard'>LOGIN</Link>
                     )}
             </button>
-        
-              
-            
-
-        </div>
-        
+        </div> 
     </>
    ); 
 };
