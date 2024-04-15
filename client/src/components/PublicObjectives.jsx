@@ -11,7 +11,7 @@ import StageII_5 from './objectives/StageII_5';
 
 function PublicObjectives() {
     return (
-        <div className="flex flex-col  bg-gray-700">
+        <div className="flex flex-col  bg-gray-700 bg-opacity-75 rounded-lg">
             <h2 className='font-bold text-black p-4'>Public Objectives</h2>
             <div className="grid grid-cols-10 gap-4">
                 <div className="col-span-1">
