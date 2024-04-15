@@ -28,7 +28,7 @@ function CurrentTurn() {
     }
 
     return (
-        <div className="bg-gray-600 p-4 h-full">
+        <div className="bg-gray-600 p-4 h-full bg-opacity-75 rounded-lg">
             <h2 className="text-xl font-bold text-white">
                 Current Turn
             </h2>
