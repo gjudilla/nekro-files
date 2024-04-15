@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../utils/auth.js';
 
 const AppNavbar = () => {
     const [loggedIn, setLoggedIn] = useState(true);
@@ -15,7 +16,7 @@ const AppNavbar = () => {
                     {!loggedIn ? (
                         <Link to='/'>LOGOUT</Link>
                     ) : (
-                        <Link to='/dashboard'>LOGIN</Link>
+                        <Link to='/dashboard'>LOGIN/SIGNUP</Link>
                     )}
             </button>
         </div> 
