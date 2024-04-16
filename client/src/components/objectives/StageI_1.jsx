@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import objectiveFront from '../../assets/objective-front.png';
-import objectiveBack from '../../assets/objective-back.png';
-
 function StageI_1() {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -9,10 +6,16 @@ function StageI_1() {
     setIsFlipped(!isFlipped);
   }
 
+  const frontImage = './assets/public_1.back.jpg'; 
+  const backImage = './assets/1.face.jpg'; 
+
   return (
     <div className="relative" onClick={handleFlip}>
-      <img src={objectiveFront}></img>
-      <img src={objectiveBack} className='hidden'></img>
+      {isFlipped ? (
+        <img src={backImage} alt="Back" />
+      ) : (
+        <img src={frontImage} alt="Front" />
+      )}
     </div>
   );
 }

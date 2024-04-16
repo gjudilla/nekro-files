@@ -1,6 +1,6 @@
 function GameState({ children }) {
     return (
-        <div className="bg-gray-700 p-4 h-full">{ children }</div>
+        <div className="bg-white bg-opacity-25 p-4 h-full rounded-lg">{ children }</div>
     )
 }
 
