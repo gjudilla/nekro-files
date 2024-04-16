@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <ApolloProvider client={client}>
-        <AppNavbar />
+        <Navbar />
         <Outlet />
       </ApolloProvider>
     </div>
