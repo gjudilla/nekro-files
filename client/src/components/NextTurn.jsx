@@ -15,7 +15,7 @@ function NextTurn({ onEndTurn, timer }) {
             </h2>
             <div className="flex justify-around items-center">
                 <button className="rounded-lg bg-blue-400 p-4 text-3xl" onClick={onEndTurn}>
-                    End Turn
+                    End of Turn
                 </button>
                 <div className="rounded-lg bg-blue-400 p-4 text-3xl">
                     <span>{formatTime(timer)}</span>
