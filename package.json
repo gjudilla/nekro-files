@@ -17,5 +17,8 @@
         "concurrently": "^8.2.0",
         "postcss": "^8.4.38",
         "tailwindcss": "^3.4.3"
+    },
+    "dependencies": {
+        "socket.io": "^4.7.5"
     }
 }
