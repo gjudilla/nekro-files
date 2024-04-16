@@ -1,0 +1,98 @@
+[
+    {
+        "name": "The Arborec",
+        "icon": "./assets/factionIconAssets/arborec-icon.png"
+    },
+    {
+        "name": "The Barony of Letnev",
+        "icon": "./assets/factionIconAssets/barony-icon.png"
+    },
+    {
+        "name": "The Clan of Saar",
+        "icon": "./assets/factionIconAssets/saar-icon.png"
+    },
+    {
+        "name": "The Embers of Muaat",
+        "icon": "./assets/factionIconAssets/muaat-icon.png"
+    },
+    {
+        "name": "The Emirates of Hacan",
+        "icon": "./assets/factionIconAssets/hacan-icon.png"
+    },
+    {
+        "name": "The Federation of Sol",
+        "icon": "./assets/factionIconAssets/sol-icon.png"
+    },
+    {
+        "name": "The Ghosts of Creuss",
+        "icon": "./assets/factionIconAssets/ghosts-icon.png"
+    },
+    {
+        "name": "The L1Z1X Mindnet",
+        "icon": "./assets/factionIconAssets/L1Z1X-icon.png"
+    },
+    {
+        "name": "The Mentak Coalition",
+        "icon": "./assets/factionIconAssets/mentak-icon.png"
+    },
+    {
+        "name": "The Naalu Collective",
+        "icon": "./assets/factionIconAssets/naalu-icon.png"
+    },
+    {
+        "name": "The Nekro Virus",
+        "icon": "./assets/factionIconAssets/nekro-icon.png"
+    },
+    {
+        "name": "Sardakk N’orr",
+        "icon": "./assets/factionIconAssets/sardakk-icon.png"
+    },
+    {
+        "name": "The Universities of Jol-Nar",
+        "icon": "./assets/factionIconAssets/jol-nar-icon.png"
+    },
+    {
+        "name": "The Winnu",
+        "icon": "./assets/factionIconAssets/winnu-icon.png"
+    },
+    {
+        "name": "The Xxcha Kingdom",
+        "icon": "./assets/factionIconAssets/xxcha-icon.png"
+    },
+    {
+        "name": "The Yin Brotherhood",
+        "icon": "./assets/factionIconAssets/yin-icon.png"
+    },
+    {
+        "name": "The Yssaril Tribes",
+        "icon": "./assets/factionIconAssets/yssaril-icon.png"
+    },
+    {
+        "name": "The Argent Flight",
+        "icon": "./assets/factionIconAssets/argent-icon.png"
+    },
+    {
+        "name": "The Empyrean",
+        "icon": "./assets/factionIconAssets/empyrean-icon.png"
+    },
+    {
+        "name": "The Mahact Gene-Sorcerers",
+        "icon": "./assets/factionIconAssets/mahact-icon.png"
+    },
+    {
+        "name": "The Naaz-Rokha Alliance",
+        "icon": "./assets/factionIconAssets/nra-icon.png"
+    },
+    {
+        "name": "The Nomad",
+        "icon": "./assets/factionIconAssets/nomad-icon.png"
+    },
+    {
+        "name": "The Titans of Ul",
+        "icon": "./assets/factionIconAssets/titans-icon.png"
+    },
+    {
+        "name": "The Vuil'Raith Cabal",
+        "icon": "./assets/factionIconAssets/cabal-icon.png"
+    }
+]
