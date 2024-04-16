@@ -1,4 +1,5 @@
-// might not need type Query on lines 14-16
+// might not need type Query //     me: User
+
 const typeDefs = `
     type User {
         _id: ID!

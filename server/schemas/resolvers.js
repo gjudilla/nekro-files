@@ -1,17 +1,19 @@
-const { User } = require('../models');
+// const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        me: async (_, args, context) => {
-            try {
-                //get user._id from the jwt payload using the authMiddleware context which is passed into graphql server (~line 30 of server.js). This retrieves the logged in user without searching the database
-                return User.findOne({_id: context.user._id});
+        // me: async (_, args, context) => {
+        //     try {
+            
+                // get user._id from the jwt payload using the authMiddleware context which is passed into graphql server (~line 30 of server.js). This retrieves the logged in user without searching the database
+
+        //         return User.findOne({_id: context.user._id});
                 
-            } catch (error) {
-                console.log("Error finding User: ", error)
-            }
-        },
+        //     } catch (error) {
+        //         console.log("Error finding User: ", error)
+        //     }
+        // },
     },
     // create mutations for fetch POST requests for Signup & login
     Mutation: {
