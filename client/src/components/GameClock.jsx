@@ -27,7 +27,7 @@ function GameClock() {
         setIsPaused(!isPaused)
     }
     return (
-        <div className="bg-gray-500 p-4 h-full" onClick={togglePause}>Round 2 - Status Phase <span className={isPaused ? 'blink' : ""}>{formatTime(timer)}</span></div>
+        <div className="flex flex-col bg-black bg-opacity-25 p-4 rounded-lg overflow-hidden text-xl font-bold text-white" onClick={togglePause}>Round 2 - Status Phase <span className={isPaused ? 'blink' : ""}>{formatTime(timer)}</span></div>
     )
 }
 

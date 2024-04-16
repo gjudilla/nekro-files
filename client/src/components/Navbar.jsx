@@ -6,10 +6,10 @@ const AppNavbar = () => {
 
    return (
     <>
-        <div className='flex items-center justify-between bg-gray-700 p-4 h-full border-b-2'>
-            <h2 className='text-[24-px font-bold text-blue-400'>Twighlight Emporium Tracker</h2>
+        <div className='flex items-center justify-between bg-white bg-opacity-25 p-4 h-full rounded-lg mb-4'>
+            <h2 className='text-xl font-bold text-white'>Twilight Imperium</h2>
             <button 
-                className='text-[24-px font-bold text-blue-500 hover:border-[2px] border-blue-500 rounded-md p-1 text-[15px] cursor-pointer'
+                className="font-bold text-lg text-blue-500 border-2 border-transparent rounded-md p-1 cursor-pointer hover:border-blue-500"
                 onClick={() => setLoggedIn(() => !loggedIn)}    
             >
                     {!loggedIn ? (

@@ -1,6 +1,6 @@
 function NextTurn() {
     return (
-        <div className="bg-gray-600 p-4 h-full">
+        <div className="bg-black bg-opacity-25 p-4 h-full rounded-lg">
             <h2 className="text-xl font-bold text-white">
                 Next Turn
             </h2>
