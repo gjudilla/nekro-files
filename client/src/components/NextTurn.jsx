@@ -1,25 +1,29 @@
-function NextTurn() {
+import React from "react";
+
+function NextTurn({ onEndTurn, timer }) {
+    const formatTime = (totalSeconds) => {
+        const hours = Math.floor(totalSeconds / 3600).toString().padStart(2, "0");
+        const minutes = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, "0");
+        const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+        return `${hours}:${minutes}:${seconds}`;
+    };
+
     return (
         <div className="bg-gray-600 p-4 h-full">
             <h2 className="text-xl font-bold text-white">
                 Next Turn
             </h2>
             <div className="flex justify-around items-center">
-                <svg width="200" height="100">
-                    <rect x="0" y="0" width="200" height="100" fill="lightblue" rx="15" ry="15" />
-                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" className="text-color-black text-xl font-bold">
-                        Trade | 5
-                    </text>
-                </svg>
-                <svg width="200" height="100">
-                    <rect x="0" y="0" width="200" height="100" fill="lightblue" rx="15" ry="15" />
-                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" className="text-color-black text-xl font-bold">
-                        00:16:25
-                    </text>
-                </svg>
+                <button className="rounded-lg bg-blue-400 p-4 text-3xl" onClick={onEndTurn}>
+                    End Turn
+                </button>
+                <div className="rounded-lg bg-blue-400 p-4 text-3xl">
+                    <span>{formatTime(timer)}</span>
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default NextTurn;
+

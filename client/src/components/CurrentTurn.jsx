@@ -9,23 +9,23 @@ function CurrentTurn() {
         if (!isPaused) {
             interval = setInterval(() => {
                 setTimer((prevTime) => prevTime + 1);
-            }, 1000) // increments time every second
+            }, 1000); // increments time every second
         }
         return () => clearInterval(interval); // cleanup interval on component unmount
-    }, [isPaused])
+    }, [isPaused]);
 
     // convert time in seconds to HH:MM:SS format
     const formatTime = (totalSeconds) => {
         const hours = Math.floor(totalSeconds / 3600).toString().padStart(2, "0");
-        const minutes = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, "0")
+        const minutes = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, "0");
         const seconds = (totalSeconds % 60).toString().padStart(2, '0');
-        return `${hours}:${minutes}:${seconds}`
+        return `${hours}:${minutes}:${seconds}`;
     };
 
     // function to pause timer manually
     const togglePause = () => {
-        setIsPaused(!isPaused)
-    }
+        setIsPaused(!isPaused);
+    };
 
     return (
         <div className="bg-gray-600 p-4 h-full">
@@ -39,7 +39,7 @@ function CurrentTurn() {
                 </button>
             </div>
         </div>
-    )
+    );
 }
 
 export default CurrentTurn;
