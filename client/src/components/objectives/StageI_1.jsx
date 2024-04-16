@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 function StageI_1() {
   const [isFlipped, setIsFlipped] = useState(false);
 
