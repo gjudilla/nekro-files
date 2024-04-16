@@ -1,7 +1,7 @@
 import React from 'react';
 // import Dashboard from './components/Dashboard';
 import './main.css';
-import AppNavbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import {
     ApolloClient,
     InMemoryCache,
@@ -37,7 +37,7 @@ const authLink = setContext((_, { headers }) => {
 function App() {
     return (
         <ApolloProvider client={client}>
-            <AppNavbar />
+            <Navbar />
             <Outlet />
         </ApolloProvider>
     )
