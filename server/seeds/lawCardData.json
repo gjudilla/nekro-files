@@ -1,0 +1,203 @@
+[
+    {
+        "name": "Anti-Intellectual Revolution",
+        "effect": "FOR : After a player researches a technology, they must destroy 1 of their non-fighter ships. AGAINST : At the start of the next strategy phase, each player chooses and exhausts 1 planet for each technology they own.",
+        "icon": "./assets/lawCardAssets/anti-intellectual-revolution.png"
+    },
+    {
+        "name": "Classified Document Leaks",
+        "effect": "When this agenda is revealed, if there are no scored secret objectives, discard this card and reveal another agenda from the top of the deck. The elected secret objective becomes a public objective; place it near the other public objectives in the common play area.",
+        "icon": "./assets/lawCardAssets/classified-leaks.png"
+    },
+    {
+        "name": "Committee Formation",
+        "effect": "The elected player gains this card. Before players vote on an agenda that requires a player to be elected, the owner of this card may discard this card to choose a player to be elected. Players do not vote on that agenda.",
+        "icon": "./assets/lawCardAssets/committee-formation.png"
+    },
+    {
+        "name": "Conventions of War",
+        "effect": "FOR : Players cannot use BOMBARDMENT against units that are on cultural planets. AGAINST : Each player that voted Against discards all of their action cards.",
+        "icon": "./assets/lawCardAssets/conventions-war.png"
+    },
+    {
+        "name": "Core Mining",
+        "effect": "Attach this card to the elected planet's card. Then, destroy 1 infantry on the planet. The resource value of this planet is increased by 2.",
+        "icon": "./assets/lawCardAssets/core-mining.png"
+    },
+    {
+        "name": "Demilitarized Zone",
+        "effect": "Attach this card to the elected planet's card. Then, destroy all units on that planet. Player's units cannot land, be produced, or be placed on this planet.",
+        "icon": "./assets/lawCardAssets/demilitarized-zone.png"
+    },
+    {
+        "name": "Enforced Travel Ban",
+        "effect": "FOR : Alpha and beta wormholes have no effect during movement. AGAINST : Destroy each PDS in or adjacent to a system that contains a wormhole.",
+        "icon": "./assets/lawCardAssets/enforced-travel-ban.png"
+    },
+    {
+        "name": "Executive Sanctions",
+        "effect": "FOR : Each player can have a maximum of 3 action cards in their hand. AGAINST : Each player discards 1 random action card from their hand.",
+        "icon": "./assets/lawCardAssets/execute-sanctions.png"
+    },
+    {
+        "name": "Fleet Regulations",
+        "effect": "FOR : Each player cannot have more than 4 tokens in their fleet pool. AGAINST : Each player places 1 command token from their reinforcements in their fleet pool.",
+        "icon": "./assets/lawCardAssets/fleet-regulations.png"
+    },
+    {
+        "name": "Holy Planet of Ixth",
+        "effect": "Attach this card to the elected planet's card. The planet's owner gains 1 victory point. Units on this planet cannot use PRODUCTION. When a player gains control of this planet, they gain 1 victory point. When a player loses control of this planet, they lose 1 victory point.",
+        "icon": "./assets/lawCardAssets/holy-ixth.png"
+    },
+    {
+        "name": "Homeland Defense Act",
+        "effect": "FOR : Each player can have any number of PDS units on planets they control. AGAINST : Each player destroys 1 of their PDS unit.",
+        "icon": "./assets/lawCardAssets/homeland-defense.png"
+    },
+    {
+        "name": "Imperial Arbiter",
+        "effect": "The elected player gains this card. At the end of the strategy phase, the owner of this card may discard this card to swap 1 of their strategy cards with 1 of another player's strategy cards.",
+        "icon": "./assets/lawCardAssets/imperial-arbiter.png"
+    },
+    {
+        "name": "Minister of Commerce",
+        "effect": "The elected player gains this card.  After the owner of this card replenishes commodities, they gain 1 trade good for each player that is their neighbor.",
+        "icon": "./assets/lawCardAssets/minister-commerce.png"
+    },
+    {
+        "name": "Minister of Exploration",
+        "effect": "The elected player gains this card. When the owner of this card gains control of a planet, they gain 1 trade good.",
+        "icon": "./assets/lawCardAssets/minister-exploration.png"
+    },
+    {
+        "name": "Minister of Industry",
+        "effect": "The elected player gains this card. When the owner of this card places a space dock in a system, their units in that system may use their PRODUCTION abilities.",
+        "icon": "./assets/lawCardAssets/minister-industry.png"
+    },
+    {
+        "name": "Minister of Peace",
+        "effect": "The elected player gains this card. After a player activates a system that contains 1 or more of a different player's units, the owner of this card may discard this card; immediately end the active player's turn.",
+        "icon": "./assets/lawCardAssets/minister-peace.png"
+    },
+    {
+        "name": "Minister of Policy",
+        "effect": "The elected player gains this card. At the end of the status phase, the owner of this card draws 1 action card",
+        "icon": "./assets/lawCardAssets/minister-policy.png"
+    },
+    {
+        "name": "Minister of Sciences",
+        "effect": "The elected player gains this card. When the owner of this card resolves the primary or secondary ability of the Technology strategy card, they do not need to spend resources to research technology.",
+        "icon": "./assets/lawCardAssets/minister-science.png"
+    },
+    {
+        "name": "Minister of War",
+        "effect": "The elected player gains this card. The owner of this card may discard this card after performing an action to remove 1 of their command counters from the game board and return it to their reinforcements; then they may perform 1 additional action.",
+        "icon": "./assets/lawCardAssets/minister-war.png"
+    },
+    {
+        "name": "Prophecy of Ixth",
+        "effect": "The elected player gains this card. The owner of this card applies +1 to the result of their fighter's combat rolls. When the owner of this card uses PRODUCTION, they discard this card unless they produce 2 or more fighters.",
+        "icon": "./assets/lawCardAssets/prophecy.png"
+    },
+    {
+        "name": "Publicize Weapon Schematics",
+        "effect": "FOR : If any player owns a war sun technology, all players may ignore all prerequisites on war sun technologies. All war suns lose SUSTAIN DAMAGE. AGAINST : Each player that owns a war sun technology discards all of their action cards.",
+        "icon": "./assets/lawCardAssets/publicize-schematics.png"
+    },
+    {
+        "name": "Regulated Conscription",
+        "effect": "FOR : When a player produces units, they produce only 1 fighter and infantry for its cost instead of 2. AGAINST : No effect.",
+        "icon": "./assets/lawCardAssets/regulated-conscription.png"
+    },
+    {
+        "name": "Representative Government (TI4)",
+        "effect": "FOR : Players cannot exhaust planets to cast votes during the agenda phase. Each player may cast 1 vote on each agenda instead. AGAINST : At the start of the next strategy phase, each player that voted Against exhausts all of their cultural planets.",
+        "icon": "./assets/lawCardAssets/rep-gov-base.png"
+    },
+    {
+        "name": "Research Team: Biotic",
+        "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 green prerequisite.",
+        "icon": "./assets/lawCardAssets/research-biotic.png"
+    },
+    {
+        "name": "Research Team: Cybernetic",
+        "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 yellow prerequisite.",
+        "icon": "./assets/lawCardAssets/research-cyber.png"
+    },
+    {
+        "name": "Research Team: Propulsion",
+        "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 blue prerequisite.",
+        "icon": "./assets/lawCardAssets/research-propulsion.png"
+    },
+    {
+        "name": "Research Team: Warfare",
+        "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 red prerequisite.",
+        "icon": "./assets/lawCardAssets/research-warfare.png"
+    },
+    {
+        "name": "Senate Sanctuary",
+        "effect": "Attach this card to the elected planet's card. The influence value of this planet is increased by 2.",
+        "icon": "./assets/lawCardAssets/senate-sanctuary.png"
+    },
+    {
+        "name": "Shard of the Throne",
+        "effect": "The elected player gains this card and 1 victory point. A player gains this card and 1 victory point when they win a combat against the owner of this card. Then, the previous owner of this card loses 1 victory point.",
+        "icon": "./assets/lawCardAssets/.png"
+    },
+    {
+        "name": "Shared Research",
+        "effect": "FOR : Each player's units can move through nebulae. AGAINST : Each player places a command token from their reinforcements in their home system, if able.",
+        "icon": "./assets/lawCardAssets/shared-research.png"
+    },
+    {
+        "name": "Terraforming Initiative",
+        "effect": "Attach this card to the elected planet's card. The resource and influence values of this planet are increased by 1.",
+        "icon": "./assets/lawCardAssets/terraforming.png"
+    },
+    {
+        "name": "The Crown of Emphidia",
+        "effect": "The elected player gains this card and 1 victory point. A player gains this card and 1 victory point after they gain control of a planet in the home system of this card's owner. Then, the previous owner of this card loses 1 victory point.",
+        "icon": "./assets/lawCardAssets/the-crown-emphidia.png"
+    },
+    {
+        "name": "The Crown of Thalnos",
+        "effect": "The elected player gains this card. During each combat round, the owner of this card may reroll any number of dice; they must destroy each of their units that did not produce a hit with its reroll.",
+        "icon": "./assets/lawCardAssets/the-crown-thalnos.png"
+    },
+    {
+        "name": "Wormhole Reconstruction",
+        "effect": "FOR : All systems that contain either an alpha or beta wormhole are adjacent to each other. AGAINST : Each player places a command token from their reinforcements in each system that contains a wormhole and 1 or more of their ships.",
+        "icon": "./assets/lawCardAssets/wormhole-reconstruction.png"
+    },
+    {
+        "name": "Articles of War",
+        "effect": "FOR : All mechs lose their printed abilities except for SUSTAIN DAMAGE. AGAINST : Each player that voted For gains 3 trade goods.",
+        "icon": "./assets/lawCardAssets/articles-war.png"
+    },
+    {
+        "name": "Checks and Balances",
+        "effect": "FOR : When a player chooses a strategy card during the strategy phase, they give that strategy card to another player that does not have 1 (or a player that does not have 2 in a three- or four-player game), if able. AGAINST : Each player readies only 3 of their planets at the end of this agenda phase.",
+        "icon": "./assets/lawCardAssets/checks-balances.png"
+    },
+    {
+        "name": "Nexus Sovereignty",
+        "effect": "FOR : Alpha and beta wormholes in the wormhole nexus have no effect during movement. AGAINST : Place a gamma wormhole token in the Mecatol Rex system.",
+        "icon": "./assets/lawCardAssets/nexus-sovereignty.png"
+    },
+    {
+        "name": "Political Censure",
+        "effect": "The elected player gains this card and 1 victory point. The elected player cannot play action cards. If the owner of this card loses this card, they lose 1 victory point.",
+        "icon": "./assets/lawCardAssets/political-censure.png"
+    },
+    {
+        "name": "Representative Government (POK)",
+        "effect": "FOR : Players cannot exhaust planets to cast votes during the agenda phase; each player may cast 1 vote on each agenda instead. Players cannot cast additional votes. AGAINST : At the start of the next strategy phase, each player that voted Against exhausts all of their cultural planets.",
+        "icon": "./assets/lawCardAssets/rep-gov-pok.png"
+    },
+    {
+        "name": "Search Warrant",
+        "effect": "The elected player gains this card and draws 2 secret objectives. The owner of this card plays with their secret objectives revealed.",
+        "icon": "./assets/lawCardAssets/search-warrant.png"
+    }
+
+]
