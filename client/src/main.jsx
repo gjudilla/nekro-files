@@ -16,8 +16,8 @@ const router = createBrowserRouter([
         path: '/',
         element: <Login />
       }, {
-        path: '/dashboard',
-        element: <Dashboard phase="agenda" /> // or "agenda" for the agenda phase
+        path: 'dashboard',
+        element: <Dashboard phase="action" /> // or "agenda" for the agenda phase
       }
     ]
   }

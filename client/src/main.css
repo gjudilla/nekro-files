@@ -11,7 +11,3 @@
     opacity: 0;
   }
 }
-
-.blink {
-  animation: blink 1s ease-in-out infinite;
-}
