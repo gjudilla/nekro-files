@@ -4,10 +4,10 @@ function StageI_1() {
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
-  }
+  };
 
-  const frontImage = './assets/public_1.back.jpg'; 
-  const backImage = './assets/1.face.jpg'; 
+  const frontImage = '/objectiveCardAssets/Stage-1-assets/amass-wealth-icon.png';
+  const backImage = '/objectiveCardAssets/Stage-1-assets/build-defenses-icon.png';
 
   return (
     <div className="relative" onClick={handleFlip}>
