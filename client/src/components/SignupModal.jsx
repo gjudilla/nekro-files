@@ -25,7 +25,7 @@ const SignupForm = ({ visible, closeModal }) => {
 
       const { token } = data.createUser;
 
-      Auth.login(token);
+      Auth.login(token);   
       closeModal(); // Close the modal after successful signup
     } catch (err) {
       console.error(err);
