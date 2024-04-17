@@ -3,7 +3,6 @@ const express = require("express");
 const { ApolloServer } = require("@apollo/server");
 const { expressMiddleware } = require("@apollo/server/express4");
 const path = require("path");
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
 // import authMiddleware from auth.js
 const { authMiddleware } = require("./utils/auth");
 // import typeDefs & resolvers for server fetches from schemas, and the db connection from config
@@ -22,6 +21,7 @@ const server = new ApolloServer({
 const startApolloServer = async () => {
   await server.start();
 
+  app.use("/assets", express.static(path.join(__dirname, "assets")));
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
   // use GraphQL API for data management
