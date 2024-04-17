@@ -1,4 +1,4 @@
-const { User } = require('../models/User');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -20,6 +20,7 @@ const resolvers = {
         
         createUser: async(_, args) => {
             try {
+                console.log(args);
                 const newUser = await User.create(args)
                 const token = signToken(newUser)
                 return {user: newUser, token}
