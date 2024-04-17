@@ -1,17 +1,17 @@
 // import express and ApolloServer, including express middleware for Apollo
-const express = require("express");
-const { ApolloServer } = require("@apollo/server");
-const { expressMiddleware } = require("@apollo/server/express4");
-const path = require("path");
+import express from "express";
+import { ApolloServer } from "@apollo/server";
+import { expressMiddleware } from "@apollo/server/express4";
+import path from "path";
 // import authMiddleware from auth.js
-const { authMiddleware } = require("./utils/auth");
+import { authMiddleware } from "./utils/auth.js";
 // import typeDefs & resolvers for server fetches from schemas, and the db connection from config
-const { typeDefs, resolvers } = require("./schemas");
-const db = require("./config/connection");
+import { typeDefs, resolvers } from "./schemas/index.js";
+import db from "./config/connection.js";
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-// instantiate AApollo Server with typeDefs & resolvers objects as arguments
+// instantiate Apollo Server with typeDefs & resolvers objects as arguments
 const server = new ApolloServer({
   typeDefs,
   resolvers,

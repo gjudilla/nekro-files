@@ -1,5 +1,5 @@
-const Law = require('./Law');
-const Objective = require('./Objective');
-const Faction = require('./Faction');
+import Law from './Law.js';
+import Objective from './Objective.js';
+import Faction from './Faction.js';
 
-module.exports = { Law, Objective, Faction };
+export default { Law, Objective, Faction };

@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+import { Schema, model } from 'mongoose';
 
 
 const lawSchema = new Schema(
@@ -28,4 +28,4 @@ const lawSchema = new Schema(
 
 const Law = model('law', lawSchema);
 
-module.exports = Law;
+export default Law;

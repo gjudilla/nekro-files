@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
-const Objective = require('../models/Objective');
-const Faction = require('../models/Faction'); // Assuming you have Faction and Law models
-const Law = require('../models/Law');
+import mongoose from 'mongoose';
+import Objective from '../models/Objective.js';
+import Faction from '../models/Faction.js'; 
+import Law from '../models/Law.js';
 
-const objectiveCardData = require('./objectiveCardData.json');
-const factionIconData = require('./factionIconData.json');
-const lawCardData = require('./lawCardData.json');
+import objectiveCardData from './objectiveCardData.json' with {type : "json"};
+import factionIconData from './factionIconData.json' with {type : "json"};
+import lawCardData from './lawCardData.json' with {type : "json"};
 
 const seedDatabase = async () => {
   try {
@@ -15,7 +15,6 @@ const seedDatabase = async () => {
       useUnifiedTopology: true,
     });
 
-    // Clear existing data (optional)
     await Promise.all([
       Objective.deleteMany(),
       Faction.deleteMany(),

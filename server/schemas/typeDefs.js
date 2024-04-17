@@ -11,9 +11,30 @@ const typeDefs = `
         user: User,
         token: ID!
     }
+    
+    type Objective {
+        name: String!
+        description: String!
+        points: Int!
+        image: String!
+    }
+
+    type Law {
+        name: String!
+        effect: String!
+        icon: String!
+    }
+
+    type Faction {
+        name: String!
+        icon: String!
+    }
 
     type Query {
         me: User
+        objectives:[Objective]
+        laws:[Law]
+        factions:[Faction]
     }
 
     type Mutation {
@@ -21,4 +42,5 @@ const typeDefs = `
         login(email: String!, password: String!): Auth
     }
     `;
-module.exports = typeDefs;
+
+export default typeDefs
