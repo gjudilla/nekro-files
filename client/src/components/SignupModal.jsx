@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../utils/mutations';
+import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const SignupForm = ({ visible, closeModal }) => {
     if (!visible) return null;
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
-  const [error, setError] = useState('');
+
+  const [validated] = useState(false);
+const[showAlert, setShowAlert] = useState(false);
 
   const [createUser] = useMutation(CREATE_USER);
+  const [login, {error}] = useMutation(LOGIN);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -19,18 +23,41 @@ const SignupForm = ({ visible, closeModal }) => {
     event.preventDefault();
 
     try {
+        console.log('this is line 22 on SignupModal')
       const { data } = await createUser({
         variables: { ...userFormData },
       });
 
       const { token } = data.createUser;
-
+      console.log('this is line 27 on SignupModal, just before Auth.login')
       Auth.login(token);
       closeModal(); // Close the modal after successful signup
     } catch (err) {
       console.error(err);
       setError(err.message);
     }
+  };
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...userFormData },
+      });
+
+      const { token } = await data.login;
+      Auth.login(token);
+      closeModal();
+    } catch (error) {
+      console.error(error);
+      setShowAlert(true);
+    }
+
+    setUserFormData({
+      email: '',
+      password: '',
+    });
   };
 
   return (
@@ -113,6 +140,13 @@ const SignupForm = ({ visible, closeModal }) => {
                         className="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
                       >
                         Sign Up
+                      </button>
+                      <button
+                        type="button"
+                        className="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
+                        onClick={handleLogin}
+                      >
+                        Login
                       </button>
                     </div>
                   </form>

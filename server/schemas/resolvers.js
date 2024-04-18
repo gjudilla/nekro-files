@@ -20,9 +20,10 @@ const resolvers = {
         
         createUser: async(_, args) => {
             try {
-                console.log(args);
+                console.log('resolvers.js line 23: ', args);
                 const newUser = await User.create(args)
                 const token = signToken(newUser)
+                console.log('resolvers.js line 26-newUser/token: ', newUser, token);
                 return {user: newUser, token}
                 
             } catch (error) {
