@@ -23,13 +23,11 @@ const[showAlert, setShowAlert] = useState(false);
     event.preventDefault();
 
     try {
-        console.log('this is line 22 on SignupModal')
       const { data } = await createUser({
         variables: { ...userFormData },
       });
 
       const { token } = data.createUser;
-      console.log('this is line 27 on SignupModal, just before Auth.login')
       Auth.login(token);
       closeModal(); // Close the modal after successful signup
     } catch (err) {
@@ -79,7 +77,7 @@ const[showAlert, setShowAlert] = useState(false);
                   {error && <p className="text-red-500 mb-4">{error}</p>}
 
                   <form onSubmit={handleFormSubmit}>
-                    {/* <div className="mb-4">
+                    {/* Leaving the following code in case we want to add username in future: <div className="mb-4">
                       <label htmlFor="username" className="block text-sm font-medium text-gray-700">
                         Username
                       </label>
