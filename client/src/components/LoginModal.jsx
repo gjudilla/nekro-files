@@ -4,7 +4,8 @@ import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
-const LoginForm = () => {
+//need to take into account visible/closeModal as per SignupForm
+const LoginForm = ({ closeModal }) => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -26,6 +27,7 @@ const LoginForm = () => {
 
       const { token } = await data.login;
       Auth.login(token);
+      closeModal();
     } catch (error) {
       console.error(error);
       setShowAlert(true);
