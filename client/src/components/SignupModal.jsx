@@ -28,6 +28,8 @@ const[showAlert, setShowAlert] = useState(false);
       });
 
       const { token } = data.createUser;
+
+
       Auth.login(token);
       closeModal(); // Close the modal after successful signup
     } catch (err) {
