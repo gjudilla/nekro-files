@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../utils/mutations';
+import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const SignupForm = ({ visible, closeModal }) => {
     if (!visible) return null;
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
-  const [error, setError] = useState('');
+
+  const [validated] = useState(false);
+const[showAlert, setShowAlert] = useState(false);
 
   const [createUser] = useMutation(CREATE_USER);
+  const [login, {error}] = useMutation(LOGIN);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -25,12 +29,35 @@ const SignupForm = ({ visible, closeModal }) => {
 
       const { token } = data.createUser;
 
-      Auth.login(token);   
+
+      Auth.login(token);
       closeModal(); // Close the modal after successful signup
     } catch (err) {
       console.error(err);
       setError(err.message);
     }
+  };
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...userFormData },
+      });
+
+      const { token } = await data.login;
+      Auth.login(token);
+      closeModal();
+    } catch (error) {
+      console.error(error);
+      setShowAlert(true);
+    }
+
+    setUserFormData({
+      email: '',
+      password: '',
+    });
   };
 
   return (
@@ -52,7 +79,7 @@ const SignupForm = ({ visible, closeModal }) => {
                   {error && <p className="text-red-500 mb-4">{error}</p>}
 
                   <form onSubmit={handleFormSubmit}>
-                    {/* <div className="mb-4">
+                    {/* Leaving the following code in case we want to add username in future: <div className="mb-4">
                       <label htmlFor="username" className="block text-sm font-medium text-gray-700">
                         Username
                       </label>
@@ -113,6 +140,13 @@ const SignupForm = ({ visible, closeModal }) => {
                         className="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
                       >
                         Sign Up
+                      </button>
+                      <button
+                        type="button"
+                        className="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
+                        onClick={handleLogin}
+                      >
+                        Login
                       </button>
                     </div>
                   </form>
