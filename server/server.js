@@ -1,4 +1,3 @@
-// jeffTues5 & jeffThur5 are identical other than this comment
 // import express and ApolloServer, including express middleware for Apollo
 const express = require("express");
 const { ApolloServer } = require("@apollo/server");
