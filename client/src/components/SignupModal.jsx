@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../utils/mutations';
+import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
-const SignupForm = ({ closeModal }) => {
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
-  const [error, setError] = useState('');
+const SignupForm = ({ visible, closeModal }) => {
+    if (!visible) return null;
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+
+  const [validated] = useState(false);
+const[showAlert, setShowAlert] = useState(false);
 
   const [createUser] = useMutation(CREATE_USER);
+  const [login, {error}] = useMutation(LOGIN);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -24,6 +29,7 @@ const SignupForm = ({ closeModal }) => {
 
       const { token } = data.createUser;
 
+
       Auth.login(token);
       closeModal(); // Close the modal after successful signup
     } catch (err) {
@@ -32,12 +38,34 @@ const SignupForm = ({ closeModal }) => {
     }
   };
 
+  const handleLogin = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...userFormData },
+      });
+
+      const { token } = await data.login;
+      Auth.login(token);
+      closeModal();
+    } catch (error) {
+      console.error(error);
+      setShowAlert(true);
+    }
+
+    setUserFormData({
+      email: '',
+      password: '',
+    });
+  };
+
   return (
     <>
       <div className="fixed z-10 inset-0 overflow-y-auto">
         <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+            <div className="absolute inset-0 bg-gray-500 opacity-45"></div>
           </div>
 
           <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
@@ -51,7 +79,7 @@ const SignupForm = ({ closeModal }) => {
                   {error && <p className="text-red-500 mb-4">{error}</p>}
 
                   <form onSubmit={handleFormSubmit}>
-                    <div className="mb-4">
+                    {/* Leaving the following code in case we want to add username in future: <div className="mb-4">
                       <label htmlFor="username" className="block text-sm font-medium text-gray-700">
                         Username
                       </label>
@@ -65,7 +93,7 @@ const SignupForm = ({ closeModal }) => {
                         className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         required
                       />
-                    </div>
+                    </div> */}
 
                     <div className="mb-4">
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -112,6 +140,13 @@ const SignupForm = ({ closeModal }) => {
                         className="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
                       >
                         Sign Up
+                      </button>
+                      <button
+                        type="button"
+                        className="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
+                        onClick={handleLogin}
+                      >
+                        Login
                       </button>
                     </div>
                   </form>
