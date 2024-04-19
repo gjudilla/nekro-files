@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Faction } = require('../models');
 const { signToken } = require('../utils/auth');
 const {AuthenticationError} = require('../utils/auth');
 
@@ -15,13 +15,19 @@ const resolvers = {
                 console.log("Error finding User: ", error)
             }
         },
+        factions: async () => {
+            try {
+                return await Faction.find({});
+            } catch (error) {
+                console.log('Error finding Factions: ', error)
+            }
+        }
     },
     // create mutations for fetch POST requests for Signup & login
     Mutation: {
         
         createUser: async(_, args) => {
             try {
-                console.log('resolvers.js line 23, args to create user: ', args);
                 const newUser = await User.create(args)
                 const token = signToken(newUser)
                 return {user: newUser, token}
