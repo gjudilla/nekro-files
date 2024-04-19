@@ -45,12 +45,13 @@ const[showAlert, setShowAlert] = useState(false);
       const { data } = await login({
         variables: { ...userFormData },
       });
-
-      const { token } = await data.login;
-      Auth.login(token);
+      if (data?.login?.token) {
+        Auth.login(data.login.token);
+      }
+      
       closeModal();
     } catch (error) {
-      console.error(error);
+      //console.error(error);
       setShowAlert(true);
     }
 

@@ -1,5 +1,6 @@
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
+const {AuthenticationError} = require('../utils/auth');
 
 const resolvers = {
     Query: {
@@ -31,6 +32,7 @@ const resolvers = {
         },
         login: async (parent, {email, password}) => {
             const user = await User.findOne({ email});
+
             
             if (!user) {
                 throw AuthenticationError;
@@ -40,7 +42,6 @@ const resolvers = {
             if(!correctPw) {
                 throw AuthenticationError;
             }
-
             const token = signToken(user);
             return { token, user };
         },
