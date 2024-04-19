@@ -5,14 +5,14 @@ import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const SignupForm = ({ visible, closeModal }) => {
-    if (!visible) return null;
+  if (!visible) return null;
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
 
   const [validated] = useState(false);
-const[showAlert, setShowAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   const [createUser] = useMutation(CREATE_USER);
-  const [login, {error}] = useMutation(LOGIN);
+  const [login, { error }] = useMutation(LOGIN);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;

@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Faction } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -14,6 +14,13 @@ const resolvers = {
                 console.log("Error finding User: ", error)
             }
         },
+        factions: async () => {
+            try {
+                return await Faction.find({});
+            } catch (error) {
+                console.log('Error finding Factions: ', error)
+            }
+        }
     },
     // create mutations for fetch POST requests for Signup & login
     Mutation: {
