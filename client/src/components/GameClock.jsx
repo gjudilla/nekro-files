@@ -29,7 +29,7 @@ function GameClock() {
 
     return (
         <div className="bg-gray-500 p-4 h-full flex items-center justify-between">
-            <span className="text-xl font-bold text-white">Round 2 - Status Phase <span className={isPaused ? 'blink' : ""}>{formatTime(timer)}</span></span>
+            <span className="text-xl font-bold text-white">Status Phase <span className={isPaused ? 'blink' : ""}>{formatTime(timer)}</span></span>
             <button onClick={togglePause} className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                 {isPaused ? "▶️" : "||"}
             </button>
