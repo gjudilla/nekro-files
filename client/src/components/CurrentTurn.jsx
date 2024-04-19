@@ -34,7 +34,7 @@ function Turn({ type, onNextTurn, onEndTurn, timer, setTimer }) {
             <div className="flex justify-center items-center flex-col">
                 <div className="flex justify-center items-center">
                     <div className="rounded-lg bg-blue-400 p-4 text-3xl mb-2 mr-4">
-                        {type === "Current" ? "Politics | 3" : "Leadership | 1"}
+                        {type === "Current" ? "Politics" : "Leadership"}
                     </div>
                     <div className="rounded-lg bg-blue-400 p-4 text-3xl mb-2">
                         <span className={isPaused ? 'blink' : ""}>{formatTime(type === "Next" ? 0 : timer)}</span>

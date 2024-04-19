@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Leaderboard from "./Leaderboard";
 import GameClock from "./GameClock";
-import CurrentTurn from "./CurrentTurn";
+import Turn from "./CurrentTurn";
 import ActiveLaws from "./ActiveLaws";
-// import NextTurn from "./NextTurn";
 import PublicObjectives from "./PublicObjectives";
 import GameState from "./GameState";
 import StatusPhaseList from "./StatusPhaseList";
@@ -11,6 +10,12 @@ import HostGameModal from "./HostGameModal"
 
 function Dashboard({ phase }) {
     const isActionPhase = phase === "action";
+
+    const [currentTurnTimer, setCurrentTurnTimer] = useState(0); // Timer for the current turn
+
+    const handleNextTurn = () => {
+        setCurrentTurnTimer(0); // Reset the timer when switching to the next turn
+    };
 
     const [isModalVisible, setModalVisible] = useState(true);
 
@@ -37,11 +42,18 @@ function Dashboard({ phase }) {
                             <div className="col-span-1 row-span-2 flex flex-col gap-4">
 
                                 <div className="flex-1">
-                                    <CurrentTurn />
+                                    <Turn 
+                                        type="Current"
+                                        timer={currentTurnTimer}
+                                        setTimer={setCurrentTurnTimer}
+                                        />
                                 </div>
-                                {/* <div className="flex-1">
-                                    <NextTurn />
-                                </div> */}
+                                <div className="flex-1">
+                                    <Turn
+                                        type="Next"
+                                        onEndTurn={handleNextTurn} 
+                                    />
+                                </div>
                             </div>
                         ) : (
                             /* Content for Status Phase GameState */
@@ -59,3 +71,4 @@ function Dashboard({ phase }) {
 }
 
 export default Dashboard;
+
