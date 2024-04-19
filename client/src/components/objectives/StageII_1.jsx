@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import backImage from "../../../../server/seeds/assets/objectiveCardAssets/Stage-II-assets/stage-II-back.jpg";
+import backImage from "../../../public/images/objectiveCardAssets/Stage-II-assets/stage-II-back.jpg";
 import ObjectiveCardApp from '../ObjectiveCardModal';
 
 function StageII_1() {
@@ -12,7 +12,7 @@ function StageII_1() {
 
   const handleSelect = option => {
     // Update the selected front image based on the option selected from the modal
-    setSelectedFrontImage(option);
+    setSelectedFrontImage(option.image);
   };
 
   return (

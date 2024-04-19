@@ -12,6 +12,7 @@ import typeDefs from "./schemas/typeDefs.js";
 import resolvers from "./schemas/resolvers.js";
 import db from "./config/connection.js";
 
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 // instantiate Apollo Server with typeDefs & resolvers objects as arguments
