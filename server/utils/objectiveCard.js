@@ -8,10 +8,13 @@ const fetchObjectives = async () => {
         const formattedObjectives = objectivesFromDB.map(objective => ({
             name: objective.name,
             description: objective.description,
+            points: objective.points,
             image: objective.image
         }));
 
         return formattedObjectives;
+
+        
     } catch (error) {
         console.error('Error fetching objective cards:', error);
         return [];

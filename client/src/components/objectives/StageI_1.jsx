@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
+import backImage from "../../../../server/seeds/assets/objectiveCardAssets/Stage-1-assets/stage-1-back-icon.jpg";
+import ObjectiveCardApp from '../ObjectiveCardModal';
+
 function StageI_1() {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [selectedFrontImage, setSelectedFrontImage] = useState(backImage);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
   }
 
-  const frontImage = './assets/public_1.back.jpg'; 
-  const backImage = './assets/1.face.jpg'; 
-
+  const handleSelect = option => {
+    // Update the selected front image based on the option selected from the modal
+    setSelectedFrontImage(option);
+  };
+console.log(selectedFrontImage);
   return (
-    <div className="relative" onClick={handleFlip}>
+    <div className="relative" onClick={handleFlip} >
       {isFlipped ? (
-        <img src={backImage} alt="Back" />
+        <ObjectiveCardApp onSelect={handleSelect} />
       ) : (
-        <img src={frontImage} alt="Front" />
+        <img src={selectedFrontImage.name} alt="Front" />
+        // <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        // <p>{selectedFrontImage.name}</p>
+        // </button>
       )}
     </div>
   );
 }
 
 export default StageI_1;
+
