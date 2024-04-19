@@ -1,6 +1,12 @@
 // might not need type Query //     me: User
 
 const typeDefs = `
+    type Faction {
+        _id: ID!
+        name: String!
+        icon: String!
+    }
+
     type User {
         _id: ID!
         email: String!
@@ -14,6 +20,8 @@ const typeDefs = `
 
     type Query {
         me: User
+        factions: [Faction]
+        
     }
 
     type Mutation {
