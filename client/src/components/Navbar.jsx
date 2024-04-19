@@ -6,7 +6,6 @@ import SignupForm from './SignupModal.jsx';
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
     const handleLogin = () => {
-        console.log('you clicked Login'); 
         setShowModal(true); 
     };
     const handleOnClose = () => setShowModal(false);
