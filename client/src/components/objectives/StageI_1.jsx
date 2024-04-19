@@ -8,7 +8,7 @@ function StageI_1() {
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
-  }
+  };
 
   const handleSelect = option => {
     // Update the selected front image based on the option selected from the modal

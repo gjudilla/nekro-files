@@ -24,7 +24,8 @@ const __dirname = path.dirname(__filename);
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async () => {
   await server.start();
-app.use("/assets", express.static(path.join(__dirname, "assets")));
+
+  app.use("/assets", express.static(path.join(__dirname, "assets")));
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
   // use GraphQL API for data management

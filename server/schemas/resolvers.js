@@ -19,6 +19,13 @@ const resolvers = {
             return await Objective.find({});
         },
         
+        factions: async () => {
+            try {
+                return await Faction.find({});
+            } catch (error) {
+                console.log('Error finding Factions: ', error)
+            }
+        }
     },
     // create mutations for fetch POST requests for Signup & login
     Mutation: {
@@ -33,9 +40,10 @@ const resolvers = {
                 console.log("Error creating User: ", error)
             }
         },
-        login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+        login: async (parent, {email, password}) => {
+            const user = await User.findOne({ email});
 
+            
             if (!user) {
                 throw AuthenticationError;
             }
@@ -44,7 +52,6 @@ const resolvers = {
             if (!correctPw) {
                 throw AuthenticationError;
             }
-
             const token = signToken(user);
             return { token, user };
         },
