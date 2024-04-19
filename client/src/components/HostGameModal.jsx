@@ -15,7 +15,7 @@ query GetFactions {
 const HostGameModal = ({ visible, closeModal }) => {
     const navigate = useNavigate();
     const [numberOfPlayers, setNumberOfPlayers] = useState(3);
-    const [playerFactions, setPlayerFactions] = useState(Array(3).fill('')); // Initially for 3 players
+    const [playerFactions, setPlayerFactions] = useState(Array(3).fill({ name: '', icon: '' })); // Initially for 3 players
 
     const { loading, error, data } = useQuery(GET_FACTIONS);
     const factions = data?.factions || [];
@@ -36,10 +36,10 @@ const HostGameModal = ({ visible, closeModal }) => {
         });
     };
 
-    const handleFactionChange = (index, value) => {
-        // Update the selected faction for the player
+    const handleFactionChange = (index, selectedName) => {
+        const faction = factions.find(faction => faction.name === selectedName);
         const updatedFactions = [...playerFactions];
-        updatedFactions[index] = value;
+        updatedFactions[index] = faction || { name: '', icon: '' }; // Reset if no faction is found
         setPlayerFactions(updatedFactions);
     };
 
@@ -55,7 +55,10 @@ const HostGameModal = ({ visible, closeModal }) => {
 
     // Filters out factions that are already selected
     const getAvailableFactionsForPlayer = (currentIndex) => {
-        return factions.filter(faction => !playerFactions.includes(faction.name) || playerFactions[currentIndex] === faction.name);
+        return factions.filter(faction =>
+            // Check if the faction is not selected by any other player
+            !playerFactions.some((f, idx) => idx !== currentIndex && f.name === faction.name)
+        );
     };
 
     if (loading) return <p>Loading factions...</p>;
@@ -92,7 +95,7 @@ const HostGameModal = ({ visible, closeModal }) => {
                                                 </label>
                                                 <select
                                                     className='flex justify-between'
-                                                    value={selectedFaction}
+                                                    value={playerFactions[index].name || ''}
                                                     onChange={(e) => handleFactionChange(index, e.target.value)}>
                                                     <option value=''>Select Faction</option>
                                                     {getAvailableFactionsForPlayer(index).map(faction => (
