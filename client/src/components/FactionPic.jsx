@@ -1,5 +1,6 @@
 import React from 'react';
-import testFaction from "../../public/images/factionIconAssets/arborec-icon.png"
+import testFaction from "../../public/images/faction-blank-icon.png"
+
 
 //import defaultImage from '../path/to/your/default-placeholder-image.jpg'; // Replace with the actual path
 

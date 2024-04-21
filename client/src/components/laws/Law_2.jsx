@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import backImage from "../../../public/images/objectiveCardAssets/Stage-1-assets/stage-1-back-icon.jpg";
+import backImage from "../../../public/images/lawCardAssets/law-card-back.png";
 import LawCardApp from '../LawCardModal';
 
 function Law_1() {
