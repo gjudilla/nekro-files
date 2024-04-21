@@ -1,5 +1,17 @@
 [
     {
+        "name": "Stage I Back",
+        "description": "blank",
+        "points": 0,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/stage-1-back-icon.jpg"
+    },
+    {
+        "name": "Stage II Back",
+        "description": "blank",
+        "points": 0,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/stage-II-back.jpg"
+    },
+    {
         "name": "Achieve Supremacy",
         "description": "Have your flagship or a war sun in another player's home system or the Mecatol Rex system",
         "points": 2,

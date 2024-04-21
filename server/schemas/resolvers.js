@@ -1,4 +1,5 @@
 import Objective from '../models/Objective.js';
+import Law from '../models/Law.js';
 import User from '../models/User.js';
 import { signToken } from '../utils/auth.js';
 
@@ -17,6 +18,9 @@ const resolvers = {
         },
         objectives: async () => {
             return await Objective.find({});
+        },
+        laws: async () => {
+            return await Law.find({});
         },
         
         factions: async () => {

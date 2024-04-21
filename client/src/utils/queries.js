@@ -10,3 +10,13 @@ export const QUERY_OBJECTIVES = gql`
       }
   }
 `;
+
+export const QUERY_LAWS = gql`
+  {
+    laws {
+        name
+        effect
+        icon
+      }
+  }
+`;
