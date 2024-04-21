@@ -8,7 +8,7 @@ import Law_5 from './laws/Law_5';
 function PublicObjectives() {
     return (
         <div className="bg-white bg-opacity-25 p-4 h-full rounded-lg">
-            <h2 className='text-xl font-bold text-white'>Public Objectives</h2>
+            <h2 className='text-xl font-bold text-white'>Active Laws</h2>
             <div className="grid grid-cols-5 gap-4">
                 <div className="col-span-1">
                     <Law_1 />

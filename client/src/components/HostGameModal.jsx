@@ -1,23 +1,24 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
+import { QUERY_FACTIONS } from '../utils/queries';
 
-const GET_FACTIONS = gql`
-query GetFactions {
-    factions {
-        _id
-        name
-        icon
-    }
-}
-`;
+// const GET_FACTIONS = gql`
+// query GetFactions {
+//     factions {
+//         _id
+//         name
+//         icon
+//     }
+// }
+// `;
 
 const HostGameModal = ({ visible, closeModal }) => {
     const navigate = useNavigate();
     const [numberOfPlayers, setNumberOfPlayers] = useState(3);
     const [playerFactions, setPlayerFactions] = useState(Array(3).fill({ name: '', icon: '' })); // Initially for 3 players
 
-    const { loading, error, data } = useQuery(GET_FACTIONS);
+    const { loading, error, data } = useQuery(QUERY_FACTIONS);
     const factions = data?.factions || [];
 
     if (!visible) return null;
@@ -99,7 +100,7 @@ const HostGameModal = ({ visible, closeModal }) => {
                                                     onChange={(e) => handleFactionChange(index, e.target.value)}>
                                                     <option value=''>Select Faction</option>
                                                     {getAvailableFactionsForPlayer(index).map(faction => (
-                                                        <option key={faction._id} value={faction.name}>
+                                                        <option key={faction.name} value={faction.name}>
                                                             {faction.name}
                                                         </option>
                                                     ))}

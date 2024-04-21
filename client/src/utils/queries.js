@@ -20,3 +20,12 @@ export const QUERY_LAWS = gql`
       }
   }
 `;
+
+export const QUERY_FACTIONS = gql`
+  {
+    laws {
+        name
+        icon
+      }
+  }
+`;
