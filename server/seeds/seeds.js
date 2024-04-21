@@ -3,9 +3,9 @@ import Objective from '../models/Objective.js';
 import Faction from '../models/Faction.js'; 
 import Law from '../models/Law.js';
 
-import objectiveCardData from './objectiveCardData.json' with {type : "json"};
-import factionIconData from './factionIconData.json' with {type : "json"};
-import lawCardData from './lawCardData.json' with {type : "json"};
+import objectiveCardData from './objectiveCardData.json' assert {type : "json"};
+import factionIconData from './factionIconData.json' assert {type : "json"};
+import lawCardData from './lawCardData.json' assert {type : "json"};
 
 const seedDatabase = async () => {
   try {
