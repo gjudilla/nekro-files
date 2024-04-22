@@ -38,7 +38,7 @@ An essential game management tool for Twilight Imperium to keep the game organiz
 
 [Visit the deployed site](XXXXXXXXXX)
 
-This application tracks the play of the TTRPG Twighlight Imperium. Once logged in the host can add the correct number of players (between 3-8), assign the correct factions to each player, and then the game can begin. During each round the phase of the game is displayed and the amount of time each player is taking to complete their turn is tracked. Also, Active Law Cards & Public Objective cards that have been played are also displayed. 
+This application tracks the play of the TTRPG Twighlight Imperium 4th Edition and supports the Prophecy of Kings expansion. Once logged in the host can add the correct number of players (between 3-8), assign the correct factions to each player (which then sets the initial speaker order), and then the game can begin. During each round the phase of the game is displayed and the amount of time each player is taking to complete their turn is tracked. Also, Active Law Cards & Public Objective cards that have been played are also displayed. 
 
 ---
 
