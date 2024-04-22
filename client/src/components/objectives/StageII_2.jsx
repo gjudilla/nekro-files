@@ -20,7 +20,7 @@ function StageII_2() {
       {isFlipped ? (
         <ObjectiveCardApp onSelect={handleSelect} />
       ) : (
-        <img src={selectedFrontImage} alt="Front" />
+        <img src={selectedFrontImage} alt="Front" className='rounded-lg'/>
       )}
     </div>
   );
