@@ -15,9 +15,13 @@ function Dashboard({ phase }) {
     const [isModalVisible, setModalVisible] = useState(true);
     const [isGameHosted, setGameHosted] = useState(false); // Track whether the game has been hosted or not
     const [playerFactions, setPlayerFactions] = useState(Array(3).fill({ name: '', icon: '' })); // Adding the state for player factions
+    const [currentFactionIndex, setCurrentFactionIndex] = useState(0); // Track the index of the current faction
+    const [nextFactionIndex, setNextFactionIndex] = useState(1); // Track the index of the next faction
 
     const handleNextTurn = () => {
-        setCurrentTurnTimer(0); // Reset the timer when switching to the next turn
+        setCurrentFactionIndex(nextFactionIndex);
+        setNextFactionIndex((nextFactionIndex + 1) % playerFactions.length);
+        setCurrentTurnTimer(0);
     };
 
     const closeModal = () => {
@@ -53,10 +57,15 @@ function Dashboard({ phase }) {
                                             type="Current"
                                             timer={currentTurnTimer}
                                             setTimer={setCurrentTurnTimer}
+                                            factionOne={playerFactions[currentFactionIndex]?.name || ''} // Pass the current faction's name
+                                            onNextTurn={handleNextTurn} // Pass the function to handle the end of the turn
                                         />
                                     </div>
                                     <div className="flex-1">
-                                        <Turn type="Next" onEndTurn={handleNextTurn} />
+                                    <Turn 
+                                            type="Next" 
+                                            factionTwo={playerFactions[nextFactionIndex]?.name || ''} // Pass the next faction's name
+                                        />
                                     </div>
                                 </div>
                             ) : (
