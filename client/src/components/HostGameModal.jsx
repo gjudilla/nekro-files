@@ -5,17 +5,15 @@ import { useQuery, gql } from '@apollo/client';
 const GET_FACTIONS = gql`
 query GetFactions {
     factions {
-        _id
         name
         icon
     }
 }
 `;
 
-const HostGameModal = ({ visible, closeModal, onGameHosted }) => {
+const HostGameModal = ({ visible, closeModal, onGameHosted, playerFactions, setPlayerFactions }) => {
     const navigate = useNavigate();
     const [numberOfPlayers, setNumberOfPlayers] = useState(3);
-    const [playerFactions, setPlayerFactions] = useState(Array(3).fill({ name: '', icon: '' })); // Initially for 3 players
 
     const { loading, error, data } = useQuery(GET_FACTIONS);
     const factions = data?.factions || [];
@@ -29,8 +27,11 @@ const HostGameModal = ({ visible, closeModal, onGameHosted }) => {
         setPlayerFactions(prevFactions => {
             const newFactions = prevFactions.slice(0, newNumberOfPlayers); // Keep only the selections for the current number of players
             // If the new number is greater than the current length, add empty strings for new players
-            for (let i = prevFactions.length; i < newNumberOfPlayers; i++) {
-                newFactions.push('');
+            // for (let i = prevFactions.length; i < newNumberOfPlayers; i++) {
+            //     newFactions.push('');
+            // }
+            while (newFactions.length < newNumberOfPlayers) {
+                newFactions.push({ name: '', icon: '' }); // Ensure empty objects for new players
             }
             return newFactions;
         });
@@ -96,7 +97,7 @@ const HostGameModal = ({ visible, closeModal, onGameHosted }) => {
                                                 </label>
                                                 <select
                                                     className='flex justify-between'
-                                                    value={playerFactions[index].name || ''}
+                                                    value={selectedFaction.name || ''}
                                                     onChange={(e) => handleFactionChange(index, e.target.value)}>
                                                     <option value=''>Select Faction</option>
                                                     {getAvailableFactionsForPlayer(index).map(faction => (
