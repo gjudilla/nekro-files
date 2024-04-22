@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
+// import LoadingModal from './LoadingModal.jsx';
 
 const GET_FACTIONS = gql`
 query GetFactions {
@@ -20,6 +21,9 @@ const HostGameModal = ({ visible, closeModal, onGameHosted, playerFactions, setP
     const factions = data?.factions || [];
 
     if (!visible) return null;
+
+    // if (loading) return <LoadingModal />; // Return loading modal if site is loading
+    if (error) return <p>Error! ${error.message}</p>;
 
     const handleSliderChange = (event) => {
         const newNumberOfPlayers = Number(event.target.value);
@@ -63,9 +67,6 @@ const HostGameModal = ({ visible, closeModal, onGameHosted, playerFactions, setP
             !playerFactions.some((f, idx) => idx !== currentIndex && f.name === faction.name)
         );
     };
-
-    if (loading) return <p>Loading factions...</p>;
-    if (error) return `Error! ${error.message}`;
 
     return (
         <div className="fixed z-10 inset-0 overflow-y-auto">
