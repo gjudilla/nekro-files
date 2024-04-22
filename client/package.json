@@ -11,13 +11,14 @@
   },
   "dependencies": {
     "@apollo/client": "^3.9.10",
+    "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
     "graphql": "^16.8.1",
     "jwt-decode": "^3.1.2",
+    "postcss": "^8.4.38",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
-    "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
