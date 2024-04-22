@@ -12,7 +12,7 @@ query GetFactions {
 }
 `;
 
-const HostGameModal = ({ visible, closeModal }) => {
+const HostGameModal = ({ visible, closeModal, onGameHosted }) => {
     const navigate = useNavigate();
     const [numberOfPlayers, setNumberOfPlayers] = useState(3);
     const [playerFactions, setPlayerFactions] = useState(Array(3).fill({ name: '', icon: '' })); // Initially for 3 players
@@ -49,8 +49,9 @@ const HostGameModal = ({ visible, closeModal }) => {
         // Handle the API request to create a game session here
         // Send playerFactions as part of our game data
         console.log('Hosing game with factions:', playerFactions); // List of players (factions) in speaker order
+        onGameHosted();
         closeModal();
-        navigate('/dashboard') // Redirect to dashboard after form submission
+        navigate('/dashboard'); // Redirect to dashboard after form submission
     };
 
     // Filters out factions that are already selected
@@ -147,3 +148,4 @@ const HostGameModal = ({ visible, closeModal }) => {
 }
 
 export default HostGameModal;
+
