@@ -5,6 +5,7 @@ import { useQuery, gql } from '@apollo/client';
 const GET_FACTIONS = gql`
 query GetFactions {
     factions {
+        _id
         name
         icon
     }
