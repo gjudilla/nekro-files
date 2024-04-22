@@ -1,16 +1,16 @@
-const { Schema, model } = require('mongoose');
+import { Schema, model } from 'mongoose';
 
 const objectiveSchema = new Schema(
   {
     name: {
       type: String,
       required: true,
-      max_length: 50,
+      maxlength: 50,
     },
     description: {
       type: String,
       required: true,
-      max_length: 250,
+      maxlength: 250,
     },
     points: {
       type: Number,
@@ -19,7 +19,7 @@ const objectiveSchema = new Schema(
     image: {
         type: String,
         required: true,
-        max_length: 100
+        maxlength: 100
     }
   },
   {
@@ -29,6 +29,6 @@ const objectiveSchema = new Schema(
   }
 );
 
-const Objective = model('objective', objectiveSchema);
+const Objective = model('Objective', objectiveSchema);
 
-module.exports = Objective;
+export default Objective;

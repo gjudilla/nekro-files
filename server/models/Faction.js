@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+import { Schema, model } from 'mongoose';
 
 const factionSchema = new Schema(
   {
@@ -22,4 +22,4 @@ const factionSchema = new Schema(
 
 const Faction = model('faction', factionSchema);
 
-module.exports = Faction;
+export default Faction;

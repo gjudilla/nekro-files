@@ -1,6 +1,7 @@
-import React from 'react';
-// import FactionPic from './FactionPic'; // Make sure this path is correct
+import React, { useState } from 'react';
+import FactionPic from './FactionPic'; // Make sure this path is correct
 import PointCounter from './PointCounter'; // Make sure this path is correct
+
 
 const Leaderboard = ({ playerFactions }) => {
   return (
@@ -12,6 +13,7 @@ const Leaderboard = ({ playerFactions }) => {
         </div>
       ))}
     </div>
+
   );
 };
 

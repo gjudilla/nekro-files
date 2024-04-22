@@ -1,242 +1,254 @@
 [
     {
-        "name" : "Corner the Market",
-        "description": "Control 4 planets that each have the same planet trait.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/corner-market-icon.png"
+        "name": "Stage I Back",
+        "description": "blank",
+        "points": 0,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/stage-1-back-icon.jpg"
     },
     {
-        "name" : "Develop Weaponry",
-        "description": "Own 2 unit upgrade technologies.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/develop-weaponry-icon.png"
+        "name": "Stage II Back",
+        "description": "blank",
+        "points": 0,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/stage-II-back.jpg"
     },
     {
-        "name" : "Diversify Research",
-        "description": "Own 2 technologies in each of 2 colors.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/diversify-research-icon.png"
-    },
-    {
-        "name" : "Erect a Monument",
-        "description": "Spend 8 resources.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/erect-monument-icon.png"
-    },
-    {
-        "name" : "Expand Borders",
-        "description": "Control 6 planets in non-home systems.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/expand-borders-icon.png"
-    },
-    {
-        "name" : "Found Research Outposts",
-        "description": "Control 3 planets that have technology specialties.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/found-research-outposts-icon.png"
-    },
-    {
-        "name" : "Intimidate Council",
-        "description": "Have 1 or more ships in 2 systems that are adjacent to Mecatol Rex's System.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/intimidate-council-icon.png"
-    },
-    {
-        "name" : "Lead from the Front",
-        "description": "Spend a total of 3 tokens from your tactic and/or strategy pools.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/lead-from-front-icon.png"
-    },
-    {
-        "name" : "Negotiate Trade Routes",
-        "description": "Spend 5 trade goods.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/negotiate-trade-icon.png"
-    },
-    {
-        "name" : "Sway the Council ",
-        "description": "Spend 8 influence.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/sway-council-icon.png"
-    },
-    {
-        "name" : "Amass Wealth",
-        "description": "Spend 3 influence, 3 resources, and 3 trade goods.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/amass-wealth-icon.png"
-    },
-    {
-        "name" : "Build Defenses",
-        "description": "Have 4 or more structures.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/build-defenses-icon.png"
-    },
-    {
-        "name" : "Discover Lost Outposts",
-        "description": "Control 2 planets that have attachments.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/discover-lost-icon.png"
-    },
-    {
-        "name" : "Engineer a Marvel",
-        "description": "Have your flagship or a war sun on the game board.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/engineer-marvel-icon.png"
-    },
-    {
-        "name" : "Explore Deep Space",
-        "description": "Have units in 3 systems that do not contain planets.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/explore-deep-space-icon.png"
-    },
-    {
-        "name" : "Improve Infrastructure",
-        "description": "Have structures on 3 planets outside of your home system.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/improve-infrastructure-icon.png"
-    },
-    {
-        "name" : "Make History",
-        "description": "Have units in 2 systems that contain legendary planets, Mecatol Rex, or anomalies.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/make-history-icon.png"
-    },
-    {
-        "name" : "Populate the Outer Rim",
-        "description": "Have units in 3 systems on the edge of the game board other than your home system.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/populate-outer-rim-icon.png"
-    },
-    {
-        "name" : "Push Boundaries",
-        "description": "Control more planets than each of 2 of your neighbors.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/push-boundaries-icon.png"
-    },
-    {
-        "name" : "Raise a Fleet",
-        "description": "Have 5 or more non-fighter ships in 1 system.",
-        "points": 1,
-        "image": "./objectiveCardAssets/Stage-1-assets/raise-fleet-icon.png"
-    },
-    {
-        "name" : "Centralize Galactic Trade",
-        "description": "Spend 10 trade goods.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/centralize-trade-icon.png"
-    },
-    {
-        "name" : "Conquer the Weak",
-        "description": "Control 1 planet that is in another player's home system.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/conquer-weak-icon.png"
-    },
-    {
-        "name" : "Form Galactic Brain Trust",
-        "description": "Control 5 planets that have technology specialties.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/form-brain-trust-icon.png"
-    },
-    {
-        "name" : "Found a Golden Age",
-        "description": "Spend 16 resources.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/found-golden-age-icon.png"
-    },
-    {
-        "name" : "Galvanize the People",
-        "description": "Spend a total of 6 tokens from your tactic and/or strategy pools.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/galvanize-people-icon.png"
-    },
-    {
-        "name" : "Manipulate Galactic Law",
-        "description": "Spend 16 influence.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/manipulate-law-icon.png"
-    },
-    {
-        "name" : "Master the Sciences",
-        "description": "Own 2 technologies in each of 4 colors.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/master-sciences-icon.png"
-    },
-    {
-        "name" : "Revolutionize Warfare",
-        "description": "Own 3 unit upgrade technologies.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/revolutionize-warfare-icon.png"
-    },
-    {
-        "name" : "Subdue the Galaxy",
-        "description": "Subdue the Galaxy",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/subdue-galaxy-icon.png"
-    },
-    {
-        "name" : "Unify the Colonies",
-        "description": "Control 6 planets that each have the same planet trait.",
-        "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/unify-colonies-icon.png"
-    },
-    {
-        "name" : "Achieve Supremacy",
+        "name": "Achieve Supremacy",
         "description": "Have your flagship or a war sun in another player's home system or the Mecatol Rex system",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/achieve-supremacy-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/achieve-supremacy-icon.png"
+    },
+    {
+        "name": "Amass Wealth",
+        "description": "Spend 3 influence, 3 resources, and 3 trade goods.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/amass-wealth-icon.png"
     },
     {
         "name" : "Become a Legend",
         "description": "Have units in 4 systems that contain legendary planets, Mecatol Rex, or anomalies.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/become-legend-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/become-legend-icon.png"
     },
     {
-        "name" : "Command an Armada",
+        "name": "Build Defenses",
+        "description": "Have 4 or more structures.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/build-defenses-icon.png"
+    },
+    {
+        "name": "Centralize Galactic Trade",
+        "description": "Spend 10 trade goods.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/centralize-trade-icon.png"
+    },
+    {
+        "name": "Command an Armada",
         "description": "Have 8 or more non-fighter ships in 1 system.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/command-armada-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/command-armada-icon.png"
     },
     {
-        "name" : "Construct Massive Cities",
+        "name": "Conquer the Weak",
+        "description": "Control 1 planet that is in another player's home system.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/conquer-weak-icon.png"
+    },
+    {
+        "name": "Construct Massive Cities",
         "description": "Have 7 or more structures.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/construct-cities-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/construct-cities-icon.png"
     },
     {
-        "name" : "Control the Borderlands",
+        "name": "Control the Borderlands",
         "description": "Have units in 5 systems on the edge of the game board other than your home system.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/control-borderlands-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/control-borderlands-icon.png"
     },
     {
-        "name" : "Hold Vast Reserves",
+        "name": "Corner the Market",
+        "description": "Control 4 planets that each have the same planet trait.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/corner-market-icon.png"
+    },
+    {
+        "name": "Develop Weaponry",
+        "description": "Own 2 unit upgrade technologies.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/develop-weaponry-icon.png"
+    },
+    {
+        "name": "Discover Lost Outposts",
+        "description": "Control 2 planets that have attachments.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/discover-lost-icon.png"
+    },
+    {
+        "name": "Diversify Research",
+        "description": "Own 2 technologies in each of 2 colors.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/diversify-research-icon.png"
+    },
+    {
+        "name": "Erect a Monument",
+        "description": "Spend 8 resources.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/erect-monument-icon.png"
+    },
+    {
+        "name": "Engineer a Marvel",
+        "description": "Have your flagship or a war sun on the game board.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/engineer-marvel-icon.png"
+    },
+    {
+        "name": "Expand Borders",
+        "description": "Control 6 planets in non-home systems.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/expand-borders-icon.png"
+    },
+    {
+        "name": "Explore Deep Space",
+        "description": "Have units in 3 systems that do not contain planets.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/explore-deep-space-icon.png"
+    },
+    {
+        "name" : "Form Galactic Brain Trust",
+        "description": "Control 5 planets that have technology specialties.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/form-brain-trust-icon.png"
+    },
+    {
+        "name": "Found a Golden Age",
+        "description": "Spend 16 resources.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/found-golden-age-icon.png"
+    },
+    {
+        "name": "Found Research Outposts",
+        "description": "Control 3 planets that have technology specialties.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/found-research-outposts-icon.png"
+    },
+    {
+        "name": "Galvanize the People",
+        "description": "Spend a total of 6 tokens from your tactic and/or strategy pools.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/galvanize-people-icon.png"
+    },
+    {
+        "name": "Hold Vast Reserves",
         "description": "Spend 6 influence, 6 resources, and 6 trade goods.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/hold-reserves-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/hold-reserves-icon.png"
     },
     {
-        "name" : "Patrol Vast Territories",
+        "name": "Improve Infrastructure",
+        "description": "Have structures on 3 planets outside of your home system.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/improve-infrastructure-icon.png"
+    },
+    {
+        "name": "Intimidate Council",
+        "description": "Have 1 or more ships in 2 systems that are adjacent to Mecatol Rex's System.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/intimidate-council-icon.png"
+    },
+    {
+        "name": "Lead from the Front",
+        "description": "Spend a total of 3 tokens from your tactic and/or strategy pools.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/lead-from-front-icon.png"
+    },
+    {
+        "name": "Make History",
+        "description": "Have units in 2 systems that contain legendary planets, Mecatol Rex, or anomalies.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/make-history-icon.png"
+    },
+    {
+        "name": "Manipulate Galactic Law",
+        "description": "Spend 16 influence.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/manipulate-law-icon.png"
+    },
+    {
+        "name": "Master the Sciences",
+        "description": "Own 2 technologies in each of 4 colors.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/master-sciences-icon.png"
+    },
+    {
+        "name": "Negotiate Trade Routes",
+        "description": "Spend 5 trade goods.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/negotiate-trade-icon.png"
+    },
+    {
+        "name": "Patrol Vast Territories",
         "description": "Have units in 5 systems that do not contain planets.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/patrol-territories-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/patrol-territories-icon.png"
     },
     {
-        "name" : "Protect the Border",
+        "name": "Populate the Outer Rim",
+        "description": "Have units in 3 systems on the edge of the game board other than your home system.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/populate-outer-rim-icon.png"
+    },
+    {
+        "name": "Protect the Border",
         "description": "Have structures on 5 planets outside of your home system.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/protect-border-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/protect-border-icon.png"
     },
     {
-        "name" : "Reclaim Ancient Monuments",
+        "name": "Push Boundaries",
+        "description": "Control more planets than each of 2 of your neighbors.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/push-boundaries-icon.png"
+    },
+    {
+        "name": "Raise a Fleet",
+        "description": "Have 5 or more non-fighter ships in 1 system.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/raise-fleet-icon.png"
+    },
+    {
+        "name": "Reclaim Ancient Monuments",
         "description": "Control 3 planets that have attachments.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/reclaim-monuments-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/reclaim-monuments-icon.png"
     },
     {
-        "name" : "Rule Distant Lands",
+        "name": "Revolutionize Warfare",
+        "description": "Own 3 unit upgrade technologies.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/revolutionize-warfare-icon.png"
+    },
+    {
+        "name": "Rule Distant Lands",
         "description": "Control 2 planets that are each in or adjacent to a different, other player's home system.",
         "points": 2,
-        "image": "./objectiveCardAssets/Stage-II-assets/rule-lands-icon.png"
+        "image": "./images/objectiveCardAssets/Stage-II-assets/rule-lands-icon.png"
+    },
+    {
+        "name": "Subdue the Galaxy",
+        "description": "Subdue the Galaxy",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/subdue-galaxy-icon.png"
+    },
+    {
+        "name": "Sway the Council ",
+        "description": "Spend 8 influence.",
+        "points": 1,
+        "image": "./images/objectiveCardAssets/Stage-1-assets/sway-council-icon.png"
+    },
+    {
+        "name": "Unify the Colonies",
+        "description": "Control 6 planets that each have the same planet trait.",
+        "points": 2,
+        "image": "./images/objectiveCardAssets/Stage-II-assets/unify-colonies-icon.png"
     }
 ]

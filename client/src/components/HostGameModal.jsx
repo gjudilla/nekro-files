@@ -101,7 +101,7 @@ const HostGameModal = ({ visible, closeModal, onGameHosted, playerFactions, setP
                                                     onChange={(e) => handleFactionChange(index, e.target.value)}>
                                                     <option value=''>Select Faction</option>
                                                     {getAvailableFactionsForPlayer(index).map(faction => (
-                                                        <option key={faction._id} value={faction.name}>
+                                                        <option key={faction.name} value={faction.name}>
                                                             {faction.name}
                                                         </option>
                                                     ))}
