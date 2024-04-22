@@ -7,9 +7,9 @@ const Leaderboard = ({ playerFactions }) => {
       {playerFactions.map((faction, index) => (
         <div key={index} className="flex flex-col items-center space-x-2 m-2">
           {faction.icon ? (
-            <img src={faction.icon} alt={faction.name} className='h-8 w-8'></img>
+            <img src={faction.icon} alt={faction.name} className='h-20 w-20'></img>
           ) : (
-            null
+            <img src="../public/images/faction-blank-icon.png" className='h-20 w-20 rounded-full' />
           )}
           <PointCounter />
         </div>
