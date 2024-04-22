@@ -14,12 +14,11 @@ function Dashboard({ phase }) {
     const [currentTurnTimer, setCurrentTurnTimer] = useState(0); // Timer for the current turn
     const [isModalVisible, setModalVisible] = useState(true);
     const [isGameHosted, setGameHosted] = useState(false); // Track whether the game has been hosted or not
+    const [playerFactions, setPlayerFactions] = useState(Array(3).fill({ name: '', icon: '' })); // Adding the state for player factions
 
     const handleNextTurn = () => {
         setCurrentTurnTimer(0); // Reset the timer when switching to the next turn
     };
-
-
 
     const closeModal = () => {
         setModalVisible(false);
@@ -32,10 +31,10 @@ function Dashboard({ phase }) {
 
     return (
         <div>
-            {isModalVisible && <HostGameModal visible={isModalVisible} closeModal={closeModal} onGameHosted={handleGameHosted} />}
+            {isModalVisible && <HostGameModal visible={isModalVisible} closeModal={closeModal} onGameHosted={handleGameHosted} playerFactions={playerFactions} setPlayerFactions={setPlayerFactions} />}
             <div className="grid grid-cols-2 grid-rows-3 gap-4">
                 <div className="col-start-1 row-start-1">
-                    <Leaderboard />
+                    <Leaderboard playerFactions={playerFactions} />
                 </div>
                 <div className="col-start-1 row-start-2">
                     <ActiveLaws />
