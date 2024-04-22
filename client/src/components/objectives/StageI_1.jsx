@@ -16,11 +16,11 @@ function StageI_1() {
   };
   
   return (
-    <div className="relative" onClick={handleFlip} >
+    <div className="relative rounded-lg" onClick={handleFlip} >
       {isFlipped ? (
-        <ObjectiveCardApp onSelect={handleSelect} />
+        <ObjectiveCardApp onSelect={handleSelect} className="rounded-lg" />
       ) : (
-        <img src={selectedFrontImage} alt="Front" />
+        <img src={selectedFrontImage} alt="Front" className='rounded-lg' />
       )}
     </div>
   );

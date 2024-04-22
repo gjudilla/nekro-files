@@ -14,8 +14,8 @@ function PublicObjectives() {
         <div className="bg-white bg-opacity-25 p-4 h-full rounded-lg">
             <h2 className='text-xl font-bold text-white'>Public Objectives</h2>
             <div className="grid grid-cols-10 gap-4">
-                <div className="col-span-1">
-                    <StageI_1 />
+                <div className="col-span-1 rounded-lg">
+                    <StageI_1 className="rounded-lg"/>
                 </div>
                 <div className="col-span-1">
                     <StageI_2 />
