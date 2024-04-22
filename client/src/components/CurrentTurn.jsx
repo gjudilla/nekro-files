@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Turn({ type, onNextTurn, onEndTurn, timer, setTimer }) {
+function Turn({ type, onNextTurn, timer, setTimer, factionOne, factionTwo }) {
     const [isPaused, setIsPaused] = useState(type === "Next"); // Initially paused until Next Turn becomes Current Turn
     const [isTimerRunning, setIsTimerRunning] = useState(true);
 
@@ -34,10 +34,10 @@ function Turn({ type, onNextTurn, onEndTurn, timer, setTimer }) {
             <div className="flex justify-center items-center flex-col">
                 <div className="flex justify-center items-center">
                     <div className="rounded-lg bg-blue-400 p-4 text-3xl mb-2 mr-4">
-                        {type === "Current" ? "Politics" : "Leadership"}
+                        {type === "Current" ? factionOne : factionTwo }
                     </div>
                     <div className="rounded-lg bg-blue-400 p-4 text-3xl mb-2">
-                        <span className={isPaused ? 'blink' : ""}>{formatTime(type === "Next" ? 0 : timer)}</span>
+                        <span className={isPaused ? 'blink' : ""}>{formatTime(timer)}</span>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@ function Turn({ type, onNextTurn, onEndTurn, timer, setTimer }) {
                     <button className="bg-black text-white rounded-lg p-2 text-sm mt-2 mr-2" onClick={togglePause}>
                         {isTimerRunning ? "Pause Timer" : "Resume Timer"}
                     </button>
-                    <button className="bg-black text-white rounded-lg p-2 text-sm mt-2" onClick={onEndTurn}>
+                    <button className="bg-black text-white rounded-lg p-2 text-sm mt-2" onClick={onNextTurn}>
                         End Turn
                     </button>
                 </div>
