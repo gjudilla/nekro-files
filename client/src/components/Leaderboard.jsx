@@ -9,7 +9,8 @@ const Leaderboard = ({ playerFactions }) => {
           {faction.icon ? (
             <img src={faction.icon} alt={faction.name} className='h-20 w-20'></img>
           ) : (
-            <img src="../public/images/faction-blank-icon.png" className='h-20 w-20 rounded-full' />
+            // <img src="../public/images/faction-blank-icon.png" className='h-20 w-20 rounded-full' />
+            null
           )}
           <PointCounter />
         </div>
